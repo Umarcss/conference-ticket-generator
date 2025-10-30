@@ -16,8 +16,10 @@
     <div class="background-patterns">
       <img src="./assets/images/pattern-squiggly-line-top.svg" alt="" class="pattern-top" aria-hidden="true">
       <img src="./assets/images/pattern-circle.svg" alt="" class="pattern-circle" aria-hidden="true">
+      <img src="./assets/images/pattern-circle.svg" alt="" class="pattern-circle-left" aria-hidden="true">
       <img src="./assets/images/pattern-lines.svg" alt="" class="pattern-lines" aria-hidden="true">
       <img src="./assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="" class="pattern-bottom" aria-hidden="true">
+      <img src="./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg" alt="" class="pattern-bottom-mobile" aria-hidden="true">
     </div>
 
     <!-- Brand -->
@@ -101,24 +103,18 @@
               <img src="./assets/images/logo-mark.svg" alt="" aria-hidden="true" class="ticket-brand-mark">
               <div class="ticket-brand-text">Coding Conf</div>
             </div>
-            <h3 class="ticket-title">Coding Conf</h3>
             <p class="ticket-date">Jan 31, 2025 / Austin, TX</p>
-            <div class="ticket-details">
-              <div class="ticket-detail">
-                <span class="detail-label">Name:</span>
-                <span class="detail-value" id="ticket-name"></span>
+            <div class="ticket-profile">
+              <div class="ticket-avatar" id="ticket-avatar-container">
+                <img id="ticket-avatar" src="" alt="Avatar" style="display: none;">
               </div>
-              <div class="ticket-detail">
-                <span class="detail-label">Email:</span>
-                <span class="detail-value" id="ticket-email"></span>
+              <div class="ticket-ident">
+                <div class="ticket-name" id="ticket-name"></div>
+                <div class="ticket-username">
+                  <img src="./assets/images/icon-github.svg" alt="" aria-hidden="true" class="ticket-username-icon">
+                  <span id="ticket-github"></span>
+                </div>
               </div>
-              <div class="ticket-detail">
-                <span class="detail-label">GitHub:</span>
-                <span class="detail-value" id="ticket-github"></span>
-              </div>
-            </div>
-            <div class="ticket-avatar" id="ticket-avatar-container">
-              <img id="ticket-avatar" src="" alt="Avatar" style="display: none;">
             </div>
           </div>
           <aside class="ticket-stub" aria-hidden="true">

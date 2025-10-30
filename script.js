@@ -272,9 +272,12 @@ class TicketGenerator {
     document.getElementById('success-email').textContent = email;
     
     // Update ticket details
-    document.getElementById('ticket-name').textContent = fullName;
-    document.getElementById('ticket-email').textContent = email;
-    document.getElementById('ticket-github').textContent = `@${github}`;
+    const ticketNameEl = document.getElementById('ticket-name');
+    if (ticketNameEl) ticketNameEl.textContent = fullName;
+    const ticketEmailEl = document.getElementById('ticket-email');
+    if (ticketEmailEl) ticketEmailEl.textContent = email;
+    const ticketGithubEl = document.getElementById('ticket-github');
+    if (ticketGithubEl) ticketGithubEl.textContent = `@${github}`;
     
     // Update ticket avatar if uploaded
     const ticketAvatar = document.getElementById('ticket-avatar');
