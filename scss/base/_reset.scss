@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.site-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-image: url("../images/pattern-lines.svg"),
+    url("../images/background-mobile.png");
+  background-size: auto, 100% 100%;
+  background-repeat: no-repeat no-repeat;
+  min-height: 100dvh;
+  @include respond(medium, min) {
+    background-image: url("../images/pattern-lines.svg"),
+      url("../images/background-tablet.png");
+  }
+  @include respond(xl, min) {
+    background-image: url("../images/pattern-lines.svg"),
+      url("../images/background-desktop.png");
+  }
+}
+
+body {
+  background-color: $clr-body-bg;
+  color: $clr-body-text-primary;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+  -webkit-appearance: none; /* Safari/Chrome */
+  appearance: textfield; /* Standard */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

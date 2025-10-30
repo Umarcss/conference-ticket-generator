@@ -1,0 +1,102 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+#form {
+  margin-top: 40px;
+  display: grid;
+  gap: 24px;
+  @include respond(small, min) {
+    max-width: 522px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 45px;
+  }
+  @include respond(xl, min) {
+    max-width: 480px;
+  }
+}
+
+.input-group {
+  display: grid;
+  gap: 12px;
+}
+
+.upload-container {
+  border: 1px dashed $clr-borders;
+  border-radius: 12px;
+  background-color: hsla(0, 0%, 100%, 0.08);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.upload-container:focus-visible {
+  box-shadow: 0 0 0 3px $clr-body-bg, 0 0 0 5px $clr-borders;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  @include text-preset(typo.$text-preset-6);
+  color: $clr-body-text-light;
+  font-weight: 400;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding: 19px 16px;
+}
+
+.upload-container:hover {
+  background-color: hsla(0, 0%, 100%, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.upload-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 2px 4px -2px #040128;
+  border: 1px solid $clr-upload-icon-border;
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+.btn-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 19px;
+}
+
+.btn-container button {
+  border: none;
+  outline: none;
+  background: hsla(0, 0%, 100%, 0.1);
+  color: $clr-body-text-primary;
+  border-radius: 4px;
+  @include text-preset(typo.$text-preset-7);
+  width: 86px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.btn-container button:focus-visible {
+  outline-offset: 1px;
+  outline: 1px solid hsla(0, 0%, 100%, 0.1);
+}
+
+.btn-container button:hover {
+  color: $clr-body-text-light;
+  text-decoration: underline;
+}

@@ -1,0 +1,80 @@
+@use "../abstracts" as *;
+
+.pattern-circle-top {
+  display: none;
+  z-index: 10;
+  pointer-events: none;
+  position: absolute;
+  @include respond(small, min) {
+    display: block;
+    width: 217px;
+    height: 217px;
+    top: -87px;
+    left: -27px;
+  }
+  @include respond(xl, min) {
+    top: -85px;
+    left: 44px;
+  }
+}
+
+.pattern-circle-middle {
+  display: none;
+  z-index: 10;
+  pointer-events: none;
+  position: absolute;
+  @include respond(small, min) {
+    display: block;
+    width: 217px;
+    height: 217px;
+    top: 552px;
+    right: -118px;
+  }
+  @include respond(xl, min) {
+    top: 534px;
+    right: 285px;
+  }
+}
+
+.line-top {
+  display: block;
+  position: absolute;
+  width: 112px;
+  height: 52px;
+  top: 24px;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+  @include respond(small, min) {
+    width: 232px;
+    height: 108px;
+    top: 88px;
+  }
+  @include respond(xl, min) {
+    width: 446px;
+    height: 208px;
+    top: 100px;
+    right: 0;
+  }
+}
+
+.line-bottom {
+  display: block;
+  position: absolute;
+  width: 301px;
+  height: 210px;
+  bottom: -5px;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
+  @include respond(small, min) {
+    width: 396px;
+    height: 276px;
+  }
+  @include respond(xl, min) {
+    width: 825px;
+    height: 400px;
+    left: 0;
+    bottom: 0;
+  }
+}

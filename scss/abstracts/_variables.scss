@@ -1,0 +1,21 @@
+// COLOR PALETTE
+$neutral900: #0d082d;
+$neutral700: #4b4869;
+$neutral500: #8784a5;
+$neutral300: #d1d0d5;
+$neutral0: #ffffff;
+$orange700: #e1604f;
+$orange500: rgb(245, 116, 99);
+$gradient: linear-gradient(90deg, #f37362 0%, #fff 100%);
+
+// SEMANTIC VALUES
+$clr-gradient: $gradient;
+$clr-body-text-primary: $neutral0;
+$clr-body-text-light: $neutral300;
+$clr-borders: $neutral500;
+$clr-error: $orange500;
+$clr-button-default: $orange500;
+$clr-button-hover: $orange700;
+$clr-ticket-number: $neutral500;
+$clr-upload-icon-border: $neutral700;
+$clr-body-bg: $neutral900;

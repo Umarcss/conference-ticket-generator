@@ -1,0 +1,53 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 33px;
+  position: relative;
+  z-index: 1000;
+  @include respond(small, min) {
+    padding-top: 40px;
+  }
+}
+
+.header-logo {
+  display: block;
+  width: 167px;
+  height: auto;
+  @include respond(small, min) {
+    width: 209px;
+  }
+}
+
+#intro {
+  padding: 0 16px;
+  margin-top: 40px;
+  padding-bottom: 114px;
+  position: relative;
+  z-index: 1000;
+  @include respond(small, min) {
+    padding: 0 32px;
+    margin-top: 60px;
+    padding-bottom: 114px;
+  }
+  @include respond(xl, min) {
+    padding-bottom: 134px;
+  }
+}
+
+.intro-text {
+  display: grid;
+  text-align: center;
+  gap: 20px;
+  @include respond(small, min) {
+    max-width: 705px;
+    margin: 0 auto;
+  }
+  @include respond(xl, min) {
+    max-width: 891px;
+    margin: 0 auto;
+  }
+}

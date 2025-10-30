@@ -1,0 +1,104 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+#generate {
+  background: $clr-button-default;
+  color: $clr-body-bg;
+  border: none;
+  outline: none;
+  height: 54px;
+  border-radius: 12px;
+  cursor: pointer;
+  @include text-preset(typo.$text-preset-5-extrabold);
+}
+
+#generate:hover {
+  background: $clr-button-hover;
+  box-shadow: 0 4px 0 0 $clr-button-default;
+}
+
+#generate:focus {
+  box-shadow: 0 0 0 3px $clr-body-bg, 0 0 0 4px $clr-body-text-primary;
+}
+
+label,
+.field-label {
+  @include text-preset(typo.$text-preset-5);
+}
+
+input {
+  background-color: hsla(0, 0%, 100%, 0.08);
+  color: $clr-body-text-primary;
+  border-radius: 12px;
+  outline: none;
+  border: 1px solid $neutral500;
+  height: 54px;
+  padding: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  @include text-preset(typo.$text-preset-6);
+  transition: 0.2s ease;
+}
+
+input:hover {
+  background-color: hsla(0, 0%, 100%, 0.2);
+}
+
+input:focus {
+  box-shadow: 0 0 0 3px $clr-body-bg, 0 0 0 5px $clr-borders;
+}
+
+input::placeholder {
+  color: $clr-body-text-light;
+}
+
+.preview-image {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  border: 1px solid $clr-borders;
+  margin-top: 19px;
+}
+
+// INFO & ERRORS
+.upload-message {
+  @include text-preset(typo.$text-preset-7);
+  color: $clr-body-text-light;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.error {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  @include text-preset(typo.$text-preset-7);
+  color: $clr-error;
+}
+
+.input-error {
+  border: 1px solid $clr-error;
+}
+
+.info-icon {
+  display: none;
+}
+
+.avatar-group .error {
+  color: $clr-body-text-light;
+}
+
+.avatar-group .info-icon {
+  display: block;
+}
+
+.error-active {
+  color: $clr-error;
+}
+
+.avatar-group.error-active .info-icon {
+  color: $clr-error;
+}

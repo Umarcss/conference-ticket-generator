@@ -1,0 +1,128 @@
+@use "../abstracts" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+
+$font-body: "Inconsolata", monospace;
+
+$text-preset-1: (
+  family: $font-body,
+  size: 60px,
+  lineHeight: 1.1,
+  letterSpacing: -1px,
+  weight: 800,
+);
+
+$text-preset-1-mobile: (
+  family: $font-body,
+  size: 30px,
+  lineHeight: 1.1,
+  letterSpacing: -1px,
+  weight: 800,
+);
+
+$text-preset-2: (
+  family: $font-body,
+  size: 40px,
+  lineHeight: 1.1,
+  letterSpacing: -1px,
+  weight: 700,
+);
+
+$text-preset-2-mobile: (
+  family: $font-body,
+  size: 24px,
+  lineHeight: 1.1,
+  letterSpacing: -1px,
+  weight: 700,
+);
+
+$text-preset-3: (
+  family: $font-body,
+  size: 30px,
+  lineHeight: 1.1,
+  letterSpacing: -1px,
+  weight: 700,
+);
+
+$text-preset-3-mobile: (
+  family: $font-body,
+  size: 22px,
+  lineHeight: 1.1,
+  letterSpacing: -1px,
+  weight: 700,
+);
+
+$text-preset-4: (
+  family: $font-body,
+  size: 24px,
+  lineHeight: 1.2,
+  letterSpacing: -0.5px,
+  weight: 500,
+);
+
+$text-preset-4-mobile: (
+  family: $font-body,
+  size: 20px,
+  lineHeight: 1.2,
+  letterSpacing: -0.5px,
+  weight: 500,
+);
+
+$text-preset-5-extrabold: (
+  family: $font-body,
+  size: 20px,
+  lineHeight: 1.1,
+  letterSpacing: -0.3px,
+  weight: 800,
+);
+
+$text-preset-5: (
+  family: $font-body,
+  size: 20px,
+  lineHeight: 1.1,
+  letterSpacing: -0.5px,
+  weight: 500,
+);
+
+$text-preset-6: (
+  family: $font-body,
+  size: 18px,
+  lineHeight: 1.2,
+  letterSpacing: 0,
+  weight: 500,
+);
+
+$text-preset-6-mobile: (
+  family: $font-body,
+  size: 14px,
+  lineHeight: 1.2,
+  letterSpacing: 0,
+  weight: 500,
+);
+
+$text-preset-7: (
+  family: $font-body,
+  size: 12px,
+  lineHeight: 1.2,
+  letterSpacing: -0.2px,
+  weight: 400,
+);
+
+body {
+  font-family: $font-body;
+}
+
+h1 {
+  @include text-preset($text-preset-1-mobile);
+  @include respond(small, min) {
+    @include text-preset($text-preset-1);
+  }
+}
+
+.subheading {
+  @include text-preset($text-preset-4-mobile);
+  color: $clr-body-text-light;
+  @include respond(small, min) {
+    @include text-preset($text-preset-4);
+  }
+}
